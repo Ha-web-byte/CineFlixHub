@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CineFlixHub</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <h1>CineFlixHub</h1>
+        <input type="text" id="search" placeholder="Search Movies..." onkeyup="searchMovies()">
+        <select id="category" onchange="filterByCategory()">
+            <option value="all">All</option>
+            <option value="action">Action</option>
+            <option value="comedy">Comedy</option>
+            <option value="drama">Drama</option>
+        </select>
+    </header>
+
+    <div id="movie-list">
+        <div class="movie-card">
+            <img src="https://via.placeholder.com/200x300" alt="Movie 1">
+            <h2>Movie Title 1</h2>
+            <p>Genre: Action</p>
+            <button onclick="openTrailer('https://www.youtube.com/watch?v=example')">Watch Trailer</button>
+        </div>
+        <div class="movie-card">
+            <img src="https://via.placeholder.com/200x300" alt="Movie 2">
+            <h2>Movie Title 2</h2>
+            <p>Genre: Comedy</p>
+            <button onclick="openTrailer('https://www.youtube.com/watch?v=example')">Watch Trailer</button>
+        </div>
+        <div class="movie-card">
+            <img src="https://via.placeholder.com/200x300" alt="Movie 3">
+            <h2>Movie Title 3</h2>
+            <p>Genre: Drama</p>
+            <button onclick="openTrailer('https://www.youtube.com/watch?v=example')">Watch Trailer</button>
+        </div>
+    </div>
+
+    <div id="movieModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 id="movieTitle"></h2>
+            <p id="movieDescription"></p>
+            <button id="watchTrailer" onclick="openTrailer()">Watch Trailer</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
